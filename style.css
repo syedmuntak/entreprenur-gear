@@ -16,7 +16,8 @@ h1 {
 }
 .container {
   display: flex;
-  width: 1188px;
+  padding: 50px;
+  /* width: 1188px; */
 }
 /* header styles starts here */
 div img {
@@ -39,6 +40,13 @@ div img {
 }
 /* header styles ends here */
 
+/* popular section starts */
+.popular-section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 40px;
+}
 .fa-star,
 .fa-star-half {
   color: orange;
@@ -68,6 +76,32 @@ div img {
   padding: 20px;
   margin-bottom: 20px;
 }
+.see-more {
+  text-decoration: none;
+  color: #1faa59;
+}
+
+/* popular section ends here */
+
+/* feature starts here */
+.feature-img {
+  width: 40%;
+  padding: 20px;
+}
+.feature-img img {
+  width: 100%;
+}
+.feature-desc {
+  width: 60%;
+  padding: 20px;
+}
+.feature {
+  display: flex;
+  padding: 20px;
+}
+/* features ends herer */
+
+/* footer starts herer */
 .social-media {
   margin-left: 20px;
   font-size: 20px;
@@ -82,4 +116,41 @@ footer {
   align-items: center;
   flex-direction: column;
   color: white;
+}
+/* footer ends herer */
+
+/* -----for mobile responsive------- */
+@media only screen and (max-width: 688px) {
+  main,
+  .container {
+    display: grid;
+    flex-wrap: nowrap;
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+    width: 100%;
+  }
+  .link-button {
+    text-decoration: none;
+    background-color: #1faa59;
+    border-radius: 5px;
+    padding: 5px 20px;
+    color: white;
+  }
+  .items {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+  }
+  .feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+/* --------for tablets responsive--------- */
+@media only screen and (min-width: 688px) and (max-width: 992px) {
+  .items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
